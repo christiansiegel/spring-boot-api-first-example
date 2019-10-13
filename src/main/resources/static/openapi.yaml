@@ -12,6 +12,7 @@ paths:
       tags:
         - pet
       summary: Find pet by ID
+      x-swagger-router-controller: PetController
       operationId: getPetById
       parameters:
         - name: petId
