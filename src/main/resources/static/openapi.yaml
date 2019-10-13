@@ -37,10 +37,11 @@ components:
   schemas:
     Pet:
       required:
+        - pet_id
         - name
       type: object
       properties:
-        id:
+        pet_id:
           type: integer
           format: int64
         name:

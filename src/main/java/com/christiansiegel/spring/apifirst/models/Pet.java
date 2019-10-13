@@ -1,26 +1,14 @@
 package com.christiansiegel.spring.apifirst.models;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy.SnakeCaseStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
+import lombok.Builder;
+import lombok.Data;
 
+@Data
+@Builder
+@JsonNaming(SnakeCaseStrategy.class)
 public class Pet {
-    private long petId;
-    private String name;
-
-    @JsonProperty("pet_id")
-    public long getPetId() {
-        return petId;
-    }
-
-    public void setPetId(long petId) {
-        this.petId = petId;
-    }
-
-    @JsonProperty
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+    final private long petId;
+    final private String name;
 }

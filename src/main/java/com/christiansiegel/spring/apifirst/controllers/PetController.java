@@ -9,9 +9,10 @@ import org.springframework.stereotype.Component;
 public class PetController {
 
     public ResponseContext getPetById(RequestContext request, Long petId){
-        Pet pet = new Pet();
-        pet.setName("Demo Pet #" + petId);
-        pet.setPetId(petId);
+        Pet pet = Pet.builder()
+                .petId(petId)
+                .name("Demo Pet #" + petId)
+                .build();
         return new ResponseContext().status(200).entity(pet);
     }
 
