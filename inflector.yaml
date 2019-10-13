@@ -26,3 +26,5 @@ exposedSpecOptions:
   useOriginalNotParsed: false
   hideInflectorExtensions: true
   mergeRootPath: true
+
+validatePayloads: true

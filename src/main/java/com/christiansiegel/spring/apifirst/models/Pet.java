@@ -3,16 +3,16 @@ package com.christiansiegel.spring.apifirst.models;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Pet {
-    private long id;
+    private long petId;
     private String name;
 
-    @JsonProperty
-    public long getId() {
-        return id;
+    @JsonProperty("pet_id")
+    public long getPetId() {
+        return petId;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setPetId(long petId) {
+        this.petId = petId;
     }
 
     @JsonProperty

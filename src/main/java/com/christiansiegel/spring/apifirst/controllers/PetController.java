@@ -11,7 +11,7 @@ public class PetController {
     public ResponseContext getPetById(RequestContext request, Long petId){
         Pet pet = new Pet();
         pet.setName("Demo Pet #" + petId);
-        pet.setId(petId);
+        pet.setPetId(petId);
         return new ResponseContext().status(200).entity(pet);
     }
 
