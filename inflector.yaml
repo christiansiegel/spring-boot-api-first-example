@@ -1,0 +1,28 @@
+# mode (development | staging | production).  Default is development, and this value will be overridden by a system property
+# -Denvironment=production for example
+environment: production
+
+# configure your default controller package for method discovery
+controllerPackage: com.christiansiegel.spring.apifirst.controllers
+
+# configure the default model package for model discovery
+modelPackage: com.christiansiegel.spring.apifirst.models
+
+# the path to the swagger definition (Note! this can be overridden with -DswaggerUrl as a system property
+swaggerUrl: static/openapi.yaml
+
+# specific mappings for models, used to locate models in the `#/definitions/${model}`
+modelMappings:
+  Pet: com.christiansiegel.spring.apifirst.models.Pet
+
+# HTTP response code when required parameters are missing
+invalidRequestCode: 400
+
+#Allows to configure the exposed spec (values in example are the defaults)
+exposedSpecOptions:
+  parseOptions:
+    resolve: false
+    resolveFully: false
+  useOriginalNotParsed: false
+  hideInflectorExtensions: true
+  mergeRootPath: true
